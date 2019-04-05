@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
-
+import { Component } from "@angular/core";
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'angular-practice01';
+  result: string;
+  onClick(username: string, password: string): void {
+    if (username.trim() === "nghien" && password.trim() === "123") {
+      alert("Success");
+    } else {
+      alert("Failed");
+    }
+  }
 }
